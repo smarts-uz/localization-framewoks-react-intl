@@ -59,12 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import Select from "../../Select"; // plasmic-import: JWxKibrd0nQl/component
+import Button from "../../Button"; // plasmic-import: NhcQbrFFM8U0/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: 71K5D1TKFdC9nh3YVWNV2t/projectcss
 import sty from "./PlasmicHomepage2.module.css"; // plasmic-import: nyPE3GFQkfct/css
+
+import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: LEA4G9Z084dG/icon
+import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: sv38lRoZqGaA/icon
 
 createPlasmicElementProxy;
 
@@ -82,7 +85,7 @@ export type PlasmicHomepage2__OverridesType = {
   section?: Flex__<"section">;
   h1?: Flex__<"h1">;
   text?: Flex__<"div">;
-  select?: Flex__<typeof Select>;
+  freeBox?: Flex__<"div">;
 };
 
 export interface DefaultHomepage2Props {}
@@ -115,37 +118,6 @@ function PlasmicHomepage2__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-
-  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
-    () => [
-      {
-        path: "select.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $ctx.params.lang;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return undefined;
-              }
-              throw e;
-            }
-          })()
-      }
-    ],
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
 
   return (
     <React.Fragment>
@@ -217,136 +189,111 @@ function PlasmicHomepage2__RenderFunc(props: {
                 </React.Fragment>
               </React.Fragment>
             </div>
-            {(() => {
-              const child$Props = {
-                className: classNames("__wab_instance", sty.select),
-                onChange: async (...eventArgs: any) => {
-                  ((...eventArgs) => {
-                    generateStateOnChangeProp($state, ["select", "value"])(
-                      eventArgs[0]
-                    );
-                  }).apply(null, eventArgs);
-                  (async value => {
-                    const $steps = {};
+            <div
+              data-plasmic-name={"freeBox"}
+              data-plasmic-override={overrides.freeBox}
+              className={classNames(projectcss.all, sty.freeBox)}
+            >
+              <Button
+                className={classNames("__wab_instance", sty.button__xNg9)}
+                onClick={async event => {
+                  const $steps = {};
 
-                    $steps["goToHomepage"] =
-                      $state.select.value === "en"
-                        ? (() => {
-                            const actionArgs = { destination: `/` };
-                            return (({ destination }) => {
-                              if (
-                                typeof destination === "string" &&
-                                destination.startsWith("#")
-                              ) {
-                                document
-                                  .getElementById(destination.substr(1))
-                                  .scrollIntoView({ behavior: "smooth" });
-                              } else {
-                                __nextRouter?.push(destination);
-                              }
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                    if (
-                      $steps["goToHomepage"] != null &&
-                      typeof $steps["goToHomepage"] === "object" &&
-                      typeof $steps["goToHomepage"].then === "function"
-                    ) {
-                      $steps["goToHomepage"] = await $steps["goToHomepage"];
-                    }
-
-                    $steps["goToHomepage2"] =
-                      $state.select.value !== $ctx.params.lang &&
-                      $state.select.value !== "en"
-                        ? (() => {
-                            const actionArgs = {
-                              destination: `/${(() => {
-                                try {
-                                  return $state.select.value;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return undefined;
-                                  }
-                                  throw e;
-                                }
-                              })()}`
-                            };
-                            return (({ destination }) => {
-                              if (
-                                typeof destination === "string" &&
-                                destination.startsWith("#")
-                              ) {
-                                document
-                                  .getElementById(destination.substr(1))
-                                  .scrollIntoView({ behavior: "smooth" });
-                              } else {
-                                __nextRouter?.push(destination);
-                              }
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                    if (
-                      $steps["goToHomepage2"] != null &&
-                      typeof $steps["goToHomepage2"] === "object" &&
-                      typeof $steps["goToHomepage2"].then === "function"
-                    ) {
-                      $steps["goToHomepage2"] = await $steps["goToHomepage2"];
-                    }
-                  }).apply(null, eventArgs);
-                },
-                options: (() => {
-                  const __composite = [
-                    { value: null, label: null },
-                    { value: null, label: null },
-                    { value: null, label: null }
-                  ];
-                  __composite["0"]["value"] = "en";
-                  __composite["0"]["label"] = "EN";
-                  __composite["1"]["value"] = "ru";
-                  __composite["1"]["label"] = "RU";
-                  __composite["2"]["value"] = "uz";
-                  __composite["2"]["label"] = "UZ";
-                  return __composite;
-                })(),
-
-                value: generateStateValueProp($state, ["select", "value"])
-              };
-
-              initializePlasmicStates(
-                $state,
-                [
-                  {
-                    name: "select.value",
-                    initFunc: ({ $props, $state, $queries }) =>
-                      (() => {
-                        try {
-                          return $ctx.params.lang;
-                        } catch (e) {
+                  $steps["goToHomepage"] = true
+                    ? (() => {
+                        const actionArgs = { destination: `/` };
+                        return (({ destination }) => {
                           if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
+                            typeof destination === "string" &&
+                            destination.startsWith("#")
                           ) {
-                            return undefined;
+                            document
+                              .getElementById(destination.substr(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            __nextRouter?.push(destination);
                           }
-                          throw e;
-                        }
+                        })?.apply(null, [actionArgs]);
                       })()
+                    : undefined;
+                  if (
+                    $steps["goToHomepage"] != null &&
+                    typeof $steps["goToHomepage"] === "object" &&
+                    typeof $steps["goToHomepage"].then === "function"
+                  ) {
+                    $steps["goToHomepage"] = await $steps["goToHomepage"];
                   }
-                ],
-                []
-              );
-              return (
-                <Select
-                  data-plasmic-name={"select"}
-                  data-plasmic-override={overrides.select}
-                  {...child$Props}
-                />
-              );
-            })()}
+                }}
+              >
+                {"EN"}
+              </Button>
+              <Button
+                className={classNames("__wab_instance", sty.button__ulEfB)}
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["goToHomepage2"] = true
+                    ? (() => {
+                        const actionArgs = { destination: `/${"ru"}` };
+                        return (({ destination }) => {
+                          if (
+                            typeof destination === "string" &&
+                            destination.startsWith("#")
+                          ) {
+                            document
+                              .getElementById(destination.substr(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            __nextRouter?.push(destination);
+                          }
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["goToHomepage2"] != null &&
+                    typeof $steps["goToHomepage2"] === "object" &&
+                    typeof $steps["goToHomepage2"].then === "function"
+                  ) {
+                    $steps["goToHomepage2"] = await $steps["goToHomepage2"];
+                  }
+                }}
+              >
+                {"RU"}
+              </Button>
+              <Button
+                className={classNames("__wab_instance", sty.button__y1Opt)}
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["goToHomepage2"] = true
+                    ? (() => {
+                        const actionArgs = { destination: `/${"uz"}` };
+                        return (({ destination }) => {
+                          if (
+                            typeof destination === "string" &&
+                            destination.startsWith("#")
+                          ) {
+                            document
+                              .getElementById(destination.substr(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            __nextRouter?.push(destination);
+                          }
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["goToHomepage2"] != null &&
+                    typeof $steps["goToHomepage2"] === "object" &&
+                    typeof $steps["goToHomepage2"].then === "function"
+                  ) {
+                    $steps["goToHomepage2"] = await $steps["goToHomepage2"];
+                  }
+                }}
+              >
+                {"UZ"}
+              </Button>
+            </div>
           </section>
         </div>
       </div>
@@ -355,11 +302,11 @@ function PlasmicHomepage2__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "text", "select"],
-  section: ["section", "h1", "text", "select"],
+  root: ["root", "section", "h1", "text", "freeBox"],
+  section: ["section", "h1", "text", "freeBox"],
   h1: ["h1"],
   text: ["text"],
-  select: ["select"]
+  freeBox: ["freeBox"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -369,7 +316,7 @@ type NodeDefaultElementType = {
   section: "section";
   h1: "h1";
   text: "div";
-  select: typeof Select;
+  freeBox: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -435,7 +382,7 @@ export const PlasmicHomepage2 = Object.assign(
     section: makeNodeComponent("section"),
     h1: makeNodeComponent("h1"),
     text: makeNodeComponent("text"),
-    select: makeNodeComponent("select"),
+    freeBox: makeNodeComponent("freeBox"),
 
     // Metadata about props expected for PlasmicHomepage2
     internalVariantProps: PlasmicHomepage2__VariantProps,

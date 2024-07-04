@@ -64,7 +64,62 @@
   height: auto;
   min-width: 0;
 }
-.select:global(.__wab_instance) {
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.button__xNg9:global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg__qiHi7 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__bnpre {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.button__ulEfB:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
+}
+.svg___4Psfz {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg___5NNc7 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.button__y1Opt:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg___5JSZb {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__pMgk9 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
 }

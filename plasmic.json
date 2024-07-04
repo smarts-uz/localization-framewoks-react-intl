@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -111,6 +111,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/[lang]"
+        },
+        {
+          "id": "NhcQbrFFM8U0",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "71K5D1TKFdC9nh3YVWNV2t",
+          "renderModuleFilePath": "plasmic/website_starter/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/website_starter/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
         }
       ],
       "icons": [
@@ -123,6 +137,16 @@
           "id": "5YlLMa3gajBT",
           "name": "ChevronUpsvgIcon",
           "moduleFilePath": "plasmic/website_starter/icons/PlasmicIcon__ChevronUpsvg.tsx"
+        },
+        {
+          "id": "LEA4G9Z084dG",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/website_starter/icons/PlasmicIcon__Checksvg.tsx"
+        },
+        {
+          "id": "sv38lRoZqGaA",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/website_starter/icons/PlasmicIcon__Icon.tsx"
         }
       ],
       "images": [],
