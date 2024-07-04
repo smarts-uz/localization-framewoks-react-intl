@@ -1,0 +1,12 @@
+{
+  "Welcome to your first page.": "Добро пожаловать на вашу первую страницу.",
+  "If you haven't already done so, go back and learn the basics by going through the Plasmic Levels tutorial.\n\nIt's always easier to start from examples! Add a new page using a template—do this from the list of pages in the top toolbar.\n\nOr press the big blue + button to start inserting items into this page.\n\nIntegrate this project into your codebase—press the <1>Code</1> button in the top right and follow the quickstart instructions.\n\nJoin our Slack community (icon in bottom left) for help any time.": "Если вы еще этого не сделали, вернитесь и изучите основы, пройдя руководство по плазменным уровням.\n\nВсегда проще начинать с примеров! Добавьте новую страницу с помощью шаблона — сделайте это из списка страниц на верхней панели инструментов.\n\nИли нажмите большую синюю кнопку +, чтобы начать вставлять элементы на эту страницу.\n\nИнтегрируйте этот проект в свою кодовую базу — нажмите кнопку Нажмите кнопку <1>Код</1> в правом верхнем углу и следуйте инструкциям по быстрому запуску.\n\nПрисоединяйтесь к нашему сообществу Slack (значок в левом нижнем углу), чтобы получить помощь в любое время.",
+  "EN": "EN",
+  "RU": "RU",
+  "UZ": "UZ",
+  "Selected": "Selected",
+  "Select…": "Select…",
+  "Option": "Option",
+  "Group Name": "Group Name",
+  "Button": "Button"
+}

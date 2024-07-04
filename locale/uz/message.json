@@ -1,0 +1,12 @@
+{
+  "Welcome to your first page.": "Birinchi sahifangizga xush kelibsiz.",
+  "If you haven't already done so, go back and learn the basics by going through the Plasmic Levels tutorial.\n\nIt's always easier to start from examples! Add a new page using a template—do this from the list of pages in the top toolbar.\n\nOr press the big blue + button to start inserting items into this page.\n\nIntegrate this project into your codebase—press the <1>Code</1> button in the top right and follow the quickstart instructions.\n\nJoin our Slack community (icon in bottom left) for help any time.": "Agar buni hali qilmagan boʻlsangiz, orqaga qayting va Plasmic Levels qoʻllanmasidan oʻtib, asoslarni oʻrganing.\n\nMisollardan boshlash har doim osonroq! Shablon yordamida yangi sahifa qo‘shing — buni yuqori asboblar panelidagi sahifalar ro‘yxatidan bajaring.\n\nYoki ushbu sahifaga elementlar qo‘shishni boshlash uchun katta ko‘k + tugmani bosing.\n\nUshbu loyihani kodlar bazasiga integratsiyalash — tugmani bosing. Yuqori oʻngdagi <1>Kod</1> tugmasini bosing va tezkor boshlash koʻrsatmalariga amal qiling.\n\nIstalgan vaqtda yordam olish uchun Slack hamjamiyatimizga (pastki chapdagi belgi) qoʻshiling.",
+  "EN": "EN",
+  "RU": "RU",
+  "UZ": "UZ",
+  "Selected": "Selected",
+  "Select…": "Select…",
+  "Option": "Option",
+  "Group Name": "Group Name",
+  "Button": "Button"
+}

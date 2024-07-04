@@ -23,12 +23,11 @@ function Homepage2() {
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
+
+  console.log("lang");
+
   return (
-    <PageParamsProvider__
-      route={useRouter()?.pathname}
-      params={useRouter()?.query}
-      query={useRouter()?.query}
-    >
+    <PageParamsProvider__ route={useRouter()?.pathname} params={useRouter()?.query} query={useRouter()?.query}>
       <PlasmicHomepage2 />
     </PageParamsProvider__>
   );
